@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="assignment.css">
+
+<body>
+
+		<div id="header">
+			<img src="logo1.png"></img>
+			<h3>Dance Studio Company</h3>
+		</div>
+</body>
+
+<div id="navigation">
+<ul>
+<li><a href="assignment.html">Contact us</a></li>
+<li><a href="assignment.html">Place</a></li>
+<li><a href="assignment.html">About</a></li>
+<li><a href="assignment.html">Home</a></li>
+</ul>
+</div>
+
+<head>
+<script type='text/javascript'>
+var imageID=0;
+function changeimage(every_seconds){
+    //change the image
+    if(!imageID){
+        document.getElementById("myimage").src="dance1.jpg";
+        imageID++;
+    }
+    else{if(imageID==1){
+        document.getElementById("myimage").src="dance2.jpg";
+        imageID++;
+    }else{if(imageID==2){
+        document.getElementById("myimage").src="dance3.jpg";
+        imageID=0;
+    }}}
+    //call same function again for x of seconds
+    setTimeout("changeimage("+every_seconds+")",((every_seconds)*1000));
+}
+</script>
+</head>
+<body onload='changeimage(2)'>
+<div style='position:center ;width:100%;height:100%;left:0px;top:0px;' align='center'><img width='1350px' height='250px' id='myimage' src='dance1.jpg'/></div>
+</body>
+
+<div id=middle>
+<h3>Places</h3>
+</div>
+
+
+</html>
